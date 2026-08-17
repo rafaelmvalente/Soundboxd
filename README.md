@@ -9,7 +9,7 @@ The core idea is to create a space where users can:
 - Search for albums and artists (via Spotify API integration)
 - Mark albums as listened and rate them
 - Write free-text reviews
-- Build custom lists (e.g. "Top 10 of 2025")
+- Build custom lists (e.g. "Top 10 of 2026")
 - Follow other users and see what they're listening to/rating
 
 The project is in its early development stage, starting with the static frontend before integrating the backend and the Spotify API.

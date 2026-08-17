@@ -25,15 +25,6 @@ The project is in its early development stage, starting with the static frontend
 - PostgreSQL, as the database for users, reviews, ratings, and lists
 - Backend (language/framework still to be decided)
 
-## Current structure
-
-\`\`\`
-music-letterboxd/
-├── index.html    # Home page
-├── style.css     # Home page styles
-└── README.md
-\`\`\`
-
 ## Status
 
 🚧 Project in early development. For now, the home page is built with fixed (placeholder) data just to validate the layout — the next step is connecting real data via the Spotify API and deciding on the backend.

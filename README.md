@@ -1,4 +1,4 @@
-# Soundboxd 🎵
+# Soundboxd
 
 A "Letterboxd, but for music" — a platform to log, rate, and review albums, inspired by the Letterboxd experience (which does this for movies).
 
@@ -27,7 +27,7 @@ The project is in its early development stage, starting with the static frontend
 
 ## Status
 
-🚧 Project in early development. For now, the home page is built with fixed (placeholder) data just to validate the layout — the next step is connecting real data via the Spotify API and deciding on the backend.
+Project in early development. For now, the home page is built with fixed (placeholder) data just to validate the layout — the next step is connecting real data via the Spotify API and deciding on the backend.
 
 ## Roadmap
 

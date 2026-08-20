@@ -31,7 +31,7 @@ Project in early development. For now, the home page is built with fixed (placeh
 
 ## Roadmap
 
-- [x] HTML structure for the home page
+- [x] HTML structure for all pages
 - [x] Initial styling (CSS)
 - [ ] Decide on backend stack
 - [ ] Spotify API integration

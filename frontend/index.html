@@ -1,133 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soundboxd</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Soundboxd — Home</title>
+  <link rel="stylesheet" href="home.css">
 </head>
-
-<!-- Body -->
 <body>
 
-  <!-- Header -->
   <header class="topbar">
-
-    <!-- Logo -->
     <div class="logo">Soundboxd</div>
-
-    <!-- Navigation -->
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Music</a>
-      <a href="#">Lists</a>
-      <a href="#">Diary</a>
-      <a href="#">Sign In</a>
-      <a href="#">Create Account</a>
-      <a href="#">Search</a>
+      <a href="index.html">Início</a>
+      <a href="buscar.html">Buscar</a>
+      <a href="listas.html">Listas</a>
+      <a href="perfil.html">Perfil</a>
     </nav>
-
   </header>
 
-  <!-- Main content -->
   <main>
+    <section class="feed-section">
+      <h2>Seu feed</h2>
 
-    <!-- Hero section -->
-    <section class="hero">
-      <h1>Registre o que você ouve.</h1>
-      <p>Avalie álbuns, escreva reviews, monte suas listas.</p>
-    </section>
-
-    <!-- Recently reviewed albums -->
-    <section class="album-grid-section">
-
-      <h2>Avaliados recentemente</h2>
-
-      <!-- Album grid -->
-      <div class="album-grid">
-
-        <!-- Album card -->
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Nome do Álbum</p>
-          <p class="album-artist">Artista</p>
-          <p class="rating">★★★★☆</p>
+      <article class="feed-card">
+        <p class="feed-user"><strong>Nome</strong> avaliou</p>
+        <div class="feed-body">
+          <img src="https://placehold.co/100x100" alt="Capa do álbum">
+          <div class="feed-content">
+            <p class="album-title">Blonde</p>
+            <p class="album-artist">Frank Ocean</p>
+            <p class="rating">★★★★★</p>
+            <p class="review-text">Um dos melhores álbuns que já ouvi...</p>
+            <div class="feed-actions">
+              <span>24 Curtidas</span>
+              <span>5 Comentários</span>
+            </div>
+          </div>
         </div>
+      </article>
 
-        <!-- Album card -->
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Nome do Álbum</p>
-          <p class="album-artist">Artista</p>
-          <p class="rating">★★★☆☆</p>
-        </div>
-
-        <!-- Album card -->
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Nome do Álbum</p>
-          <p class="album-artist">Artista</p>
-          <p class="rating">★★★★★</p>
-        </div>
-
-        <!-- Album card -->
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Nome do Álbum</p>
-          <p class="album-artist">Artista</p>
-          <p class="rating">★★☆☆☆</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Featured review -->
-    <section class="review-section">
-
-      <h2>Review em destaque</h2>
-
-      <!-- Review card -->
-      <article class="review-card">
-
-        <!-- Album cover -->
-        <img src="https://placehold.co/80x80" alt="Capa do álbum">
-
-        <!-- Review content -->
-        <div class="review-content">
-
-          <!-- Album information -->
-          <p class="review-header">
-            <strong>Nome do Álbum</strong> — Artista
-          </p>
-
-          <!-- Album rating -->
-          <p class="rating">★★★★☆</p>
-
-          <!-- Review text -->
-          <p class="review-text">
-            Escreva aqui a review de exemplo.
-            Isso vai virar dinâmico depois, vindo do banco de dados.
-          </p>
-
+      <article class="feed-card">
+        <p class="feed-user"><strong>Usuário</strong> avaliou</p>
+        <div class="feed-body">
+          <img src="https://placehold.co/100x100" alt="Capa do álbum">
+          <div class="feed-content">
+            <p class="album-title">Nome do Álbum</p>
+            <p class="album-artist">Artista</p>
+            <p class="rating">★★★★☆</p>
+            <p class="review-text">Review de exemplo, isso vai virar dinâmico depois.</p>
+            <div class="feed-actions">
+              <span>12 Curtidas</span>
+              <span>2 Comentários</span>
+            </div>
+          </div>
         </div>
       </article>
     </section>
 
+    <section class="album-grid-section">
+      <h2>Em alta</h2>
+      <div class="album-grid">
+        <div class="album-card">
+          <img src="https://placehold.co/200x200" alt="Capa do álbum">
+          <p class="album-title">Álbum</p>
+        </div>
+        <div class="album-card">
+          <img src="https://placehold.co/200x200" alt="Capa do álbum">
+          <p class="album-title">Álbum</p>
+        </div>
+        <div class="album-card">
+          <img src="https://placehold.co/200x200" alt="Capa do álbum">
+          <p class="album-title">Álbum</p>
+        </div>
+        <div class="album-card">
+          <img src="https://placehold.co/200x200" alt="Capa do álbum">
+          <p class="album-title">Álbum</p>
+        </div>
+        <div class="album-card">
+          <img src="https://placehold.co/200x200" alt="Capa do álbum">
+          <p class="album-title">Álbum</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="review-section">
+      <h2>Reviews populares</h2>
+      <article class="review-card">
+        <img src="https://placehold.co/80x80" alt="Capa do álbum">
+        <div class="review-content">
+          <p class="review-header">usuário</p>
+          <p class="review-header"><strong>Álbum</strong> — Artista</p>
+          <p class="rating">★★★★☆</p>
+          <p class="review-text">Essa produção é simplesmente...</p>
+        </div>
+      </article>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-
-    <!-- Copyright / Brand -->
-    <p>Soundboxd</p>
-
-    <!-- Footer navigation -->
-    <a href="#">Sobre</a> |
-    <a href="#">Contato</a> |
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Serviço</a>
-
+    <p>Soundboxd — projeto pessoal</p>
   </footer>
 
 </body>

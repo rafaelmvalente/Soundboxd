@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #14181c;
+  color: #ffffff;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #1c2228;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #ff8000;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: #ff8000;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.album-hero {
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+  background: #1c2228;
+}
+
+.album-cover {
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.album-hero-info h1 {
+  font-size: 2rem;
+}
+
+.album-hero-artist {
+  font-size: 1.1rem;
+  color: #9ab;
+  margin-top: 4px;
+}
+
+.album-hero-meta {
+  font-size: 0.9rem;
+  color: #9ab;
+  margin-top: 8px;
+}
+
+.album-avg-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.avg-number {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ff8000;
+}
+
+.rating {
+  color: #ff8000;
+  font-size: 0.9rem;
+}
+
+.avg-count {
+  font-size: 0.85rem;
+  color: #9ab;
+}
+
+.album-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.action-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #2a323a;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.action-btn.primary {
+  background: #ff8000;
+  color: #14181c;
+  border: none;
+  font-weight: bold;
+}
+
+.action-btn:hover {
+  border-color: #ff8000;
+}
+
+.action-btn.primary:hover {
+  background: #ff9a33;
+}
+
+.tracklist-section {
+  padding: 24px 32px;
+}
+
+.tracklist {
+  list-style: none;
+  max-width: 500px;
+}
+
+.tracklist li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #1c2228;
+  font-size: 0.9rem;
+}
+
+.track-number {
+  color: #9ab;
+  width: 28px;
+}
+
+.track-duration {
+  margin-left: auto;
+  color: #9ab;
+}
+
+.review-section {
+  padding: 24px 32px;
+}
+
+.review-card {
+  display: flex;
+  gap: 16px;
+  background: #1c2228;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin-bottom: 16px;
+}
+
+.review-card img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.review-text {
+  margin-top: 8px;
+  color: #d0d8e0;
+  font-size: 0.95rem;
+}
+
+footer {
+  padding: 24px 32px;
+  text-align: center;
+  color: #567;
+  font-size: 0.85rem;
+}

@@ -34,8 +34,16 @@
         </div>
 
         <div class="album-actions">
-          <button class="action-btn primary">+ Adicionar à lista</button>
-          <button class="action-btn">Avaliar</button>
+          <button class="action-btn primary" id="open-list-modal-btn">+ Adicionar à lista</button>
+          <button class="action-btn" id="toggle-rate-btn">Avaliar</button>
+        </div>
+
+        <div class="star-rating" id="user-rating" data-rating="0" style="display: none;">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
         </div>
       </div>
     </section>
@@ -78,5 +86,14 @@
     <p>Soundboxd — projeto pessoal</p>
   </footer>
 
+  <div class="modal-overlay" id="add-list-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close-btn">×</button>
+      <h2>Adicionar à lista</h2>
+      <p>Conteúdo do modal aqui...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

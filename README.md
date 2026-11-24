@@ -19,6 +19,7 @@ The project is in its early development stage, starting with the static frontend
 **Frontend (in progress):**
 - HTML5
 - CSS3
+- JavaScript (interações do protótipo)
 
 **Planned:**
 - Spotify API integration, for album/artist search and metadata
@@ -27,7 +28,7 @@ The project is in its early development stage, starting with the static frontend
 
 ## Status
 
-Project in early development. For now, the home page is built with fixed (placeholder) data just to validate the layout — the next step is connecting real data via the Spotify API and deciding on the backend.
+Project in early development. The browser-only frontend prototype supports album search against a small sample catalog, ratings, reviews, a listening timeline with mood and context notes, custom lists, and demo accounts. User data is stored in the current browser with `localStorage`; this is not production authentication or a shared database. The next step is connecting real catalog data via Spotify and deciding on the backend.
 
 ## Roadmap
 

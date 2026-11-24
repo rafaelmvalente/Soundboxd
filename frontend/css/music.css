@@ -190,6 +190,9 @@ footer {
   cursor: pointer;
   color: #444;
   font-size: 1.5rem;
+  background: none;
+  border: 0;
+  padding: 2px;
 }
 
 .star.filled {
@@ -226,4 +229,78 @@ footer {
   color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.star-rating {
+  display: flex;
+  margin-top: 16px;
+}
+
+.review-form,
+#add-to-list-form,
+#create-list-from-album-form {
+  display: grid;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 0 20px;
+}
+
+.review-form textarea,
+.modal-box input,
+.modal-box select,
+.modal-box textarea {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background: #14181c;
+  border: 1px solid #2a323a;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.modal-box form + form {
+  margin-top: 24px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .topbar,
+  .album-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topbar {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  .album-hero,
+  .tracklist-section,
+  .review-section {
+    padding: 20px 16px;
+  }
+
+  .album-cover {
+    width: min(240px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .album-actions {
+    flex-wrap: wrap;
+  }
 }

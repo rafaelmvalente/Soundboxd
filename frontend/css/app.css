@@ -1,0 +1,192 @@
+.app-notice {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 12px 20px;
+  color: #14181c;
+  background: #ff9a33;
+  text-align: center;
+}
+
+.app-notice.error {
+  color: #fff;
+  background: #a83232;
+}
+
+.app-notice.success {
+  color: #fff;
+  background: #287348;
+}
+
+.app-empty {
+  padding: 16px;
+  color: #9ab;
+  background: #1c2228;
+  border-radius: 8px;
+}
+
+.logout-btn {
+  margin-left: 20px;
+  padding: 7px 10px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #53616d;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.list-card {
+  color: #fff;
+}
+
+.list-album-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 8px 0 0;
+  padding: 6px 9px;
+  color: #d0d8e0;
+  background: #14181c;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+
+.list-remove-btn {
+  padding: 4px 8px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #53616d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-message {
+  min-height: 1.2em;
+  margin-top: 12px;
+  color: #ff9a33;
+  font-size: 0.9rem;
+}
+
+.auth-message[data-type="error"] {
+  color: #ff7777;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(0 0 0 / 65%);
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  width: min(100%, 440px);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 24px;
+  color: #fff;
+  background: #1c2228;
+  border-radius: 8px;
+}
+
+.modal-box h2 {
+  margin-bottom: 16px;
+}
+
+.modal-box label {
+  display: block;
+  margin: 12px 0 6px;
+  color: #9ab;
+  font-size: 0.9rem;
+}
+
+.modal-box input,
+.modal-box select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #14181c;
+  border: 1px solid #2a323a;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.modal-box button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: #fff;
+  background: none;
+  border: 0;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.like-btn {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.album-card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.album-card a:hover .album-title {
+  color: #ff8000;
+}
+
+.album-card img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a,
+  .logout-btn {
+    margin-left: 0;
+  }
+
+  .hero,
+  .album-grid-section,
+  .review-section,
+  .feed-section,
+  .search-header,
+  .search-results,
+  .profile-header,
+  .lists-section,
+  .lists-header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

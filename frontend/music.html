@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soundboxd — Álbum</title>
-  <link rel="stylesheet" href="music.css">
+  <link rel="stylesheet" href="css/music.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
@@ -21,29 +22,30 @@
 
   <main>
     <section class="album-hero">
-      <img src="https://placehold.co/240x240" alt="Capa do álbum" class="album-cover">
+      <img src="https://placehold.co/240x240" alt="Capa do álbum" class="album-cover" id="album-cover">
       <div class="album-hero-info">
-        <h1>Blonde</h1>
-        <p class="album-hero-artist">Frank Ocean</p>
-        <p class="album-hero-meta">2016 · 17 faixas</p>
+        <h1 id="album-title">Blonde</h1>
+        <p class="album-hero-artist" id="album-artist">Frank Ocean</p>
+        <p class="album-hero-meta" id="album-meta">2016 · 17 faixas</p>
 
         <div class="album-avg-rating">
-          <span class="avg-number">4.6</span>
-          <span class="rating">★★★★★</span>
-          <span class="avg-count">de 2.340 avaliações</span>
+          <span class="avg-number" id="album-user-rating">0</span>
+          <span class="rating">Sua nota</span>
+          <span class="avg-count">salva neste navegador</span>
         </div>
 
         <div class="album-actions">
           <button class="action-btn primary" id="open-list-modal-btn">+ Adicionar à lista</button>
           <button class="action-btn" id="toggle-rate-btn">Avaliar</button>
+          <button class="action-btn" id="mark-listened-btn" type="button">Registrar escuta</button>
         </div>
 
-        <div class="star-rating" id="user-rating" data-rating="0" style="display: none;">
-          <span class="star" data-value="1">★</span>
-          <span class="star" data-value="2">★</span>
-          <span class="star" data-value="3">★</span>
-          <span class="star" data-value="4">★</span>
-          <span class="star" data-value="5">★</span>
+        <div class="star-rating" id="user-rating" data-rating="0" hidden>
+          <button type="button" class="star" data-value="1" aria-label="1 estrela">★</button>
+          <button type="button" class="star" data-value="2" aria-label="2 estrelas">★</button>
+          <button type="button" class="star" data-value="3" aria-label="3 estrelas">★</button>
+          <button type="button" class="star" data-value="4" aria-label="4 estrelas">★</button>
+          <button type="button" class="star" data-value="5" aria-label="5 estrelas">★</button>
         </div>
       </div>
     </section>
@@ -61,24 +63,12 @@
 
     <section class="review-section">
       <h2>Reviews da comunidade</h2>
-
-      <article class="review-card">
-        <img src="https://placehold.co/60x60" alt="Foto do usuário">
-        <div class="review-content">
-          <p class="review-header">👤 <strong>Rafael</strong></p>
-          <p class="rating">★★★★★</p>
-          <p class="review-text">Um dos melhores álbuns que já ouvi...</p>
-        </div>
-      </article>
-
-      <article class="review-card">
-        <img src="https://placehold.co/60x60" alt="Foto do usuário">
-        <div class="review-content">
-          <p class="review-header">👤 <strong>Usuário</strong></p>
-          <p class="rating">★★★★☆</p>
-          <p class="review-text">Produção impecável, letras profundas...</p>
-        </div>
-      </article>
+      <form class="review-form" id="review-form">
+        <label for="review-text">Escreva sua review</label>
+        <textarea id="review-text" name="review" rows="4" maxlength="1000" placeholder="O que você achou deste álbum?"></textarea>
+        <button class="action-btn primary" type="submit">Publicar review</button>
+      </form>
+      <div id="community-reviews" aria-live="polite"></div>
     </section>
   </main>
 
@@ -87,13 +77,59 @@
   </footer>
 
   <div class="modal-overlay" id="add-list-modal">
-    <div class="modal-box">
-      <button class="modal-close" id="modal-close-btn">×</button>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close-btn" type="button" aria-label="Fechar">×</button>
       <h2>Adicionar à lista</h2>
-      <p>Conteúdo do modal aqui...</p>
+      <form id="add-to-list-form">
+        <label for="modal-list-select">Escolha uma lista</label>
+        <select id="modal-list-select" required></select>
+        <button class="action-btn primary" type="submit">Adicionar álbum</button>
+      </form>
+      <form id="create-list-from-album-form">
+        <label for="new-list-name">Ou crie uma nova lista</label>
+        <input id="new-list-name" name="name" maxlength="60" placeholder="Nome da lista" required>
+        <button class="action-btn" type="submit">Criar e adicionar</button>
+      </form>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <div class="modal-overlay" id="listen-modal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="listen-modal-title">
+      <button class="modal-close" id="listen-modal-close" type="button" aria-label="Fechar">×</button>
+      <h2 id="listen-modal-title">Registrar escuta</h2>
+      <p class="listen-album-label" id="listen-album-label"></p>
+      <form id="listen-form">
+        <label for="listen-at">Quando você ouviu?</label>
+        <input id="listen-at" name="listenedAt" type="datetime-local" required>
+
+        <label for="listen-mood">Como você estava se sentindo?</label>
+        <select id="listen-mood" name="mood" required>
+          <option value="animado">😊 Animado</option>
+          <option value="calmo">🌿 Calmo</option>
+          <option value="reflexivo">🌙 Reflexivo</option>
+          <option value="nostalgico">💭 Nostálgico</option>
+          <option value="focado">🎧 Focado</option>
+          <option value="outro">✨ Outro</option>
+        </select>
+
+        <label for="listen-context">Qual era o momento?</label>
+        <select id="listen-context" name="context">
+          <option value="">Não quero especificar</option>
+          <option value="deslocamento">No caminho</option>
+          <option value="casa">Em casa</option>
+          <option value="estudo">Estudando ou trabalhando</option>
+          <option value="amigos">Com amigos</option>
+          <option value="descanso">Relaxando</option>
+          <option value="outro">Outro momento</option>
+        </select>
+
+        <label for="listen-note">Uma memória ou comentário (opcional)</label>
+        <textarea id="listen-note" name="note" rows="3" maxlength="280" placeholder="O que tornou essa escuta especial?"></textarea>
+        <button class="action-btn primary" type="submit">Salvar no diário</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="JS/script.js" defer></script>
 </body>
 </html>

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soundboxd — Buscar</title>
-  <link rel="stylesheet" href="buscar.css">
+  <link rel="stylesheet" href="css/buscar.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
@@ -21,36 +22,15 @@
   <main>
     <section class="search-header">
       <h1>Buscar</h1>
-      <form class="search-form">
-        <input type="text" class="search-input" placeholder="Buscar álbuns, artistas...">
+      <form class="search-form" id="search-form">
+        <input type="search" class="search-input" name="q" placeholder="Buscar álbuns, artistas..." aria-label="Buscar álbuns ou artistas">
         <button type="submit" class="search-btn">Buscar</button>
       </form>
     </section>
 
     <section class="search-results">
-      <h2>Resultados para "Frank Ocean"</h2>
-      <div class="album-grid">
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Blonde</p>
-          <p class="album-artist">Frank Ocean</p>
-        </div>
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Channel Orange</p>
-          <p class="album-artist">Frank Ocean</p>
-        </div>
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Nostalgia, Ultra</p>
-          <p class="album-artist">Frank Ocean</p>
-        </div>
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Endless</p>
-          <p class="album-artist">Frank Ocean</p>
-        </div>
-      </div>
+      <h2 id="search-heading" aria-live="polite"></h2>
+      <div class="album-grid" id="search-results-grid"></div>
     </section>
   </main>
 
@@ -58,5 +38,6 @@
     <p>Soundboxd — projeto pessoal</p>
   </footer>
 
+  <script src="JS/script.js" defer></script>
 </body>
 </html>

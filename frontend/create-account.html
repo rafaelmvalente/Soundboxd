@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soundboxd — Criar conta</title>
-  <link rel="stylesheet" href="create-account.css">
+  <link rel="stylesheet" href="css/create-account.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
@@ -15,9 +16,9 @@
   <main class="auth-main">
     <div class="auth-card">
       <h1>Crie sua conta</h1>
-      <p class="auth-subtitle">Comece a registrar o que você ouve.</p>
+      <p class="auth-subtitle">Protótipo local: conta e atividades ficam salvas apenas neste navegador.</p>
 
-      <form class="auth-form">
+      <form class="auth-form" id="register-form">
         <label for="username">Nome de usuário</label>
         <input type="text" id="username" name="username" placeholder="seu_usuario" required>
 
@@ -25,17 +26,19 @@
         <input type="email" id="email" name="email" placeholder="voce@email.com" required>
 
         <label for="password">Senha</label>
-        <input type="password" id="password" name="password" placeholder="••••••••" required>
+        <input type="password" id="password" name="password" placeholder="Mínimo de 8 caracteres" minlength="8" autocomplete="new-password" required>
 
         <label for="confirm-password">Confirmar senha</label>
-        <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Repita sua senha" minlength="8" autocomplete="new-password" required>
 
         <button type="submit" class="auth-btn">Criar conta</button>
       </form>
+      <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
 
       <p class="auth-footer-text">Já tem uma conta? <a href="login.html">Entrar</a></p>
     </div>
   </main>
 
+  <script src="JS/script.js" defer></script>
 </body>
 </html>

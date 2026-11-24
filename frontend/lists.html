@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soundboxd — Listas</title>
-  <link rel="stylesheet" href="lists.css">
+  <link rel="stylesheet" href="css/lists.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
@@ -21,55 +22,28 @@
   <main>
     <section class="lists-header">
       <h1>Suas listas</h1>
-      <button class="new-list-btn">+ Nova lista</button>
+      <button class="new-list-btn" id="new-list-btn" type="button">+ Nova lista</button>
     </section>
 
-    <section class="lists-section">
-      <article class="list-card">
-        <div class="list-info">
-          <h2 class="list-title">Top 10 de 2025</h2>
-          <p class="list-meta">10 álbuns · criada por Rafael</p>
-        </div>
-        <div class="list-preview">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-        </div>
-      </article>
-
-      <article class="list-card">
-        <div class="list-info">
-          <h2 class="list-title">Pra estudar</h2>
-          <p class="list-meta">6 álbuns · criada por Rafael</p>
-        </div>
-        <div class="list-preview">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-        </div>
-      </article>
-
-      <article class="list-card">
-        <div class="list-info">
-          <h2 class="list-title">Clássicos essenciais</h2>
-          <p class="list-meta">15 álbuns · criada por Rafael</p>
-        </div>
-        <div class="list-preview">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-          <img src="https://placehold.co/100x100" alt="Capa do álbum">
-        </div>
-      </article>
-    </section>
+    <section class="lists-section" id="lists-container" aria-live="polite"></section>
   </main>
+
+  <div class="modal-overlay" id="new-list-modal">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="new-list-title">
+      <button class="modal-close" id="new-list-close" type="button" aria-label="Fechar">×</button>
+      <h2 id="new-list-title">Criar lista</h2>
+      <form id="new-list-form">
+        <label for="new-list-title-input">Nome da lista</label>
+        <input id="new-list-title-input" name="name" maxlength="60" required>
+        <button class="new-list-btn" type="submit">Criar lista</button>
+      </form>
+    </div>
+  </div>
 
   <footer>
     <p>Soundboxd — projeto pessoal</p>
   </footer>
 
+  <script src="JS/script.js" defer></script>
 </body>
 </html>

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soundboxd — Perfil</title>
-  <link rel="stylesheet" href="perfil.css">
+  <link rel="stylesheet" href="css/perfil.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
@@ -22,19 +23,19 @@
     <section class="profile-header">
       <img src="https://placehold.co/120x120" alt="Foto de perfil" class="avatar">
       <div class="profile-info">
-        <h1>Rafael</h1>
+        <h1 id="profile-name">Rafael</h1>
         <p class="profile-bio">Estudante de Engenharia de Software · apaixonado por música</p>
         <div class="profile-stats">
           <div class="stat">
-            <span class="stat-number">142</span>
+            <span class="stat-number" id="profile-listened-count">0</span>
             <span class="stat-label">álbuns ouvidos</span>
           </div>
           <div class="stat">
-            <span class="stat-number">38</span>
+            <span class="stat-number" id="profile-review-count">0</span>
             <span class="stat-label">reviews</span>
           </div>
           <div class="stat">
-            <span class="stat-number">5</span>
+            <span class="stat-number" id="profile-list-count">0</span>
             <span class="stat-label">listas</span>
           </div>
           <div class="stat">
@@ -47,44 +48,12 @@
 
     <section class="album-grid-section">
       <h2>Álbuns avaliados</h2>
-      <div class="album-grid">
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Blonde</p>
-          <p class="album-artist">Frank Ocean</p>
-          <p class="rating">★★★★★</p>
-        </div>
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Álbum</p>
-          <p class="album-artist">Artista</p>
-          <p class="rating">★★★★☆</p>
-        </div>
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Álbum</p>
-          <p class="album-artist">Artista</p>
-          <p class="rating">★★★☆☆</p>
-        </div>
-        <div class="album-card">
-          <img src="https://placehold.co/200x200" alt="Capa do álbum">
-          <p class="album-title">Álbum</p>
-          <p class="album-artist">Artista</p>
-          <p class="rating">★★★★★</p>
-        </div>
-      </div>
+      <div class="album-grid" id="profile-albums"></div>
     </section>
 
     <section class="review-section">
       <h2>Últimas reviews</h2>
-      <article class="review-card">
-        <img src="https://placehold.co/80x80" alt="Capa do álbum">
-        <div class="review-content">
-          <p class="review-header"><strong>Blonde</strong> — Frank Ocean</p>
-          <p class="rating">★★★★★</p>
-          <p class="review-text">Um dos melhores álbuns que já ouvi...</p>
-        </div>
-      </article>
+      <div id="profile-reviews"></div>
     </section>
   </main>
 
@@ -92,5 +61,6 @@
     <p>Soundboxd — projeto pessoal</p>
   </footer>
 
+  <script src="JS/script.js" defer></script>
 </body>
 </html>
